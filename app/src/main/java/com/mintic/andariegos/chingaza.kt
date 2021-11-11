@@ -8,4 +8,8 @@ class chingaza : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chingaza)
     }
+
+    fun onClick(view: android.view.View) {
+
+    }
 }

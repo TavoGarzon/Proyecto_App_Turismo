@@ -13,13 +13,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        boton = findViewById(R.id.boton1)
-        boton!!.setOnClickListener{
 
-        }
 
 
        }
+
+    fun onClick(view: android.view.View) {}
 
 
 }
