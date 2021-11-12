@@ -7,18 +7,20 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
-    var boton : Button?= null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
+         var botoom = findViewById<Button>(R.id.boton1)
+        botoom.setOnClickListener {
+          var  intent = Intent(this,chingaza::class.java )
+          startActivity(intent)
+        }
 
 
        }
 
-    fun onClick(view: android.view.View) {}
 
 
 }
