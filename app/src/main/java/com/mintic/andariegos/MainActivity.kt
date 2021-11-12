@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
          var botoom = findViewById<Button>(R.id.boton1)
         botoom.setOnClickListener {
-          var  intent = Intent(this,chingaza::class.java )
+          var  intent = Intent(this,sitios::class.java )
           startActivity(intent)
         }
 

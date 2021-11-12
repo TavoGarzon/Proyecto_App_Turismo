@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".chingaza">
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="300dp"
         android:layout_height="252dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/laguna2" />
 
     <TextView
-        android:layout_below="@+id/imageView4"
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="269dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="206dp"
+        android:layout_height="44dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="33dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Sendero Las Lagunas de Siecha"
@@ -30,48 +30,42 @@
     <TextView
 
         android:id="@+id/ubicacion"
+        android:layout_width="296dp"
+        android:layout_height="56dp"
         android:layout_below="@+id/editTextTextPersonName"
-        android:layout_width="349dp"
-        android:layout_height="95dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="14dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:text="Se encuentra ubicado a una hora de Bogotá. De allí proviene casi el 80 % del agua que llega a la capital."
-        android:textAlignment="center"
-        />
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/editTextTextMultiLine2"
-        android:layout_width="335dp"
+        android:layout_width="295dp"
         android:layout_height="189dp"
         android:layout_below="@+id/ubicacion"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="58dp"
         android:layout_marginBottom="60dp"
         android:ems="10"
-        android:gravity="start|top"
         android:inputType="textMultiLine"
         android:text="Precios de ingreso al parque:
-
-Mayores de 5 años y hasta 25 años: 16.000
-Adultos mayores de 25 años: 19.000
-Extranjeros no residentes en el país: 51.500
-Vehículo: 14.000 Más información en:
-
-ecoturismocorpochingaza@gmail.com
-Tel.: 3532400 ext. 3011 y 3012
-Tel.: 3508044199
-"
-        android:textAlignment="center"
-        />
+                             Mayores de 5 años y hasta 25 años: 16.000
+                    Adultos mayores de 25 años: 19.000
+                    Extranjeros no residentes en el país: 51.500
+                    Vehículo: 14.000 Más información en:
+                                      ecoturismocorpochingaza@gmail.com"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/retornar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retornar"
+        android:layout_marginStart="140dp"
         android:onClick="onClick"
-         />
+        android:text="Retornar" />
 
 </RelativeLayout>
