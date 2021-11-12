@@ -9,18 +9,21 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="300dp"
-        android:layout_height="252dp"
+        android:layout_height="208dp"
+        android:layout_below="@+id/retornar"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="45dp"
         app:srcCompat="@drawable/laguna2" />
 
     <TextView
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="206dp"
-        android:layout_height="44dp"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/imageView4"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="1dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Sendero Las Lagunas de Siecha"
@@ -42,13 +45,13 @@
 
     <TextView
         android:id="@+id/editTextTextMultiLine2"
-        android:layout_width="295dp"
-        android:layout_height="189dp"
+        android:layout_width="296dp"
+        android:layout_height="148dp"
         android:layout_below="@+id/ubicacion"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="58dp"
+        android:layout_marginEnd="57dp"
         android:layout_marginBottom="60dp"
         android:ems="10"
         android:inputType="textMultiLine"
@@ -56,8 +59,7 @@
                              Mayores de 5 años y hasta 25 años: 16.000
                     Adultos mayores de 25 años: 19.000
                     Extranjeros no residentes en el país: 51.500
-                    Vehículo: 14.000 Más información en:
-                                      ecoturismocorpochingaza@gmail.com"
+                    Vehículo: 14.000 su temperatura Varía según la altura sobre el nivel del mar entre 21,4°C en las tierras más bajas y 4,5°C en el páramo"
         android:textAlignment="center" />
 
     <Button
