@@ -55,11 +55,8 @@
         android:layout_marginBottom="60dp"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:text="Precios de ingreso al parque:
-                             Mayores de 5 años y hasta 25 años: 16.000
-                    Adultos mayores de 25 años: 19.000
-                    Extranjeros no residentes en el país: 51.500
-                    Vehículo: 14.000 su temperatura Varía según la altura sobre el nivel del mar entre 21,4°C en las tierras más bajas y 4,5°C en el páramo"
+        android:text="su temperatura Varía según la altura sobre el nivel del mar entre 21,4°C en las tierras más bajas y 4,5°C en el páramo
+        Precios de ingreso al parque:Mayores de 5 años y hasta 25 años: 16.000 Adultos mayores de 25 años: 19.000 Extranjeros no residentes en el país: 51.500 Vehículo: 14.000 "
         android:textAlignment="center" />
 
     <Button
@@ -67,7 +64,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
-        android:onClick="onClick"
         android:text="Retornar" />
 
 </RelativeLayout>
