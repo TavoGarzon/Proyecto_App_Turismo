@@ -1,10 +1,11 @@
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
+    final def var = repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+         // Warning: this repository is going to shut down soon
     }
+    var
 }
-rootProject.name = "ANDARIEGOS"
+rootProject.name = "Andariegos App"
 include ':app'
