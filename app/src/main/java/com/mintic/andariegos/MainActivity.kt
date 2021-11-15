@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         var boton = findViewById<Button>(R.id.ingreso)
         boton.setOnClickListener {
-           var intent = Intent(this,cocora::class.java)
+           var intent = Intent(this,chingaza::class.java)
            startActivity(intent)
         }
 

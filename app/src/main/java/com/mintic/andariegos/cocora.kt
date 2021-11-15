@@ -11,7 +11,7 @@ class cocora : AppCompatActivity() {
         setContentView(R.layout.activity_cocora)
         var boton = findViewById<Button>(R.id.retornar)
         boton.setOnClickListener {
-            var intent = Intent(this, MainActivity::class.java)
+            var intent = Intent(this, sitios::class.java)
             startActivity(intent)
         }
     }
