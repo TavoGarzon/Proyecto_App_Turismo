@@ -6,21 +6,15 @@ import android.os.Bundle
 import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-         var botoom = findViewById<Button>(R.id.boton1)
-        botoom.setOnClickListener {
-          var  intent = Intent(this,chingaza::class.java )
-          startActivity(intent)
+
+        var boton = findViewById<Button>(R.id.ingreso)
+        boton.setOnClickListener {
+           var intent = Intent(this,cocora::class.java)
+           startActivity(intent)
         }
 
-
-       }
-
-
-
+    }
 }

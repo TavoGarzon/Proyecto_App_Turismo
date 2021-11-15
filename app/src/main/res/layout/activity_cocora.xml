@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".cocora">
 
     <ImageView
-        android:id="@+id/imageCocora"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="30dp"
-        app:srcCompat="@drawable/CocoraImg" />
+        android:layout_below="@+id/retornar"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/cocora" />
 
     <TextView
         android:id="@+id/introduction"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageCocora"
+        android:layout_below="@+id/imageView"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:text="En la reserva natural Valle del Cocora se
@@ -59,15 +60,12 @@
         android:layout_marginTop="10dp"
         android:text="Existen zonas donde es posibe acampar así como tambien algunos hoteles, pero se requiere el equipo necesario y permiso de los habitantes."
         android:textAlignment="inherit"/>
-
-
     <Button
-        android:id="@+id/retornarn"
-        android:layout_below="@id/sentencefour"
-        android:layout_width="match_parent"
+        android:id="@+id/retornar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:text="VOLVER" />
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="20dp"
+        android:text="Retornar" />
 
 </RelativeLayout>
