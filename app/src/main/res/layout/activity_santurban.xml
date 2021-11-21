@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".chingaza">
+        tools:context=".santurban">
 
         <TextView
             android:id="@+id/textView2"
@@ -63,5 +63,5 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
