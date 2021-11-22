@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ANDARIEGOS COL</string>
+    <string name="retornar">Retornar</string>
+    <string name="laguna_del_otun">Laguna del Otún</string>
+    <string name="ubicacion_laguna">Es un embalse natural que se encuentra en el departamento de Risaralda, en el área perteneciente al Parque Nacional Natural Los Nevados.</string>
+    <string name="informacion_lagua_otun">La Laguna del otún cuenta con una extensión aproximada de 1.5 km² y una profundidad más o menos de 70 metros. Está formada por la acción volcánica y glaciar alimentada principalmente por el deshielo del Nevado de Santa Isabel.</string>
 </resources>

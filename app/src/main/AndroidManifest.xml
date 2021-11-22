@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.mintic.andariegos">
 
     <application
@@ -8,7 +9,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/andariegos_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Andariegos">
+        android:theme="@style/Theme.Andariegos"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name=".activity_lagunaotun"
+            android:exported="false" />
         <activity
             android:name=".cocora"
             android:exported="false" />
