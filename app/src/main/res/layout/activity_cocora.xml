@@ -60,6 +60,7 @@
         android:layout_marginTop="10dp"
         android:text="Existen zonas donde es posibe acampar así como tambien algunos hoteles, pero se requiere el equipo necesario y permiso de los habitantes."
         android:textAlignment="inherit"/>
+
     <Button
         android:id="@+id/retornar"
         android:layout_width="wrap_content"
