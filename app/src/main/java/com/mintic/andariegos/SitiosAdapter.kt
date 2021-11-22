@@ -1,13 +1,11 @@
 package com.mintic.andariegos
 
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import java.text.FieldPosition
-import kotlin.coroutines.coroutineContext
+import androidx.recyclerview.widget.RecyclerView
 
 class SitiosAdapter(
     private val poiList: ArrayList<Sitio>) :
