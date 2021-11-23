@@ -21,14 +21,12 @@ class PoiListActivity : AppCompatActivity() {
 
         sitiosAdapter = SitiosAdapter(listSitios)
 
-        /*poiRecyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))*/
-
         poiRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = sitiosAdapter
             setHasFixedSize(false)
         }
-        /*poiRecyclerView.adapter = sitiosAdapter*/
+
     }
 
     private fun createMockSitios(): ArrayList<Sitio> {
