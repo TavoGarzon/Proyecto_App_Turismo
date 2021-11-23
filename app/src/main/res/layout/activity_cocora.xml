@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cocora">
+
+    <ImageView
+        android:layout_below="@+id/retornar"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/cocora" />
+
+    <TextView
+        android:id="@+id/introduction"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="En la reserva natural Valle del Cocora se
+        encuentra el hogar del árbol naciona de Colombia, la Palma
+        de Cera del Quindío. una especie nativa del bosque andino
+        colombiano. Se encuentra dentro de los límites de Parque
+        Nacional de los Nevados, uno de los Parques mas importantes
+        de la region, pues es el nacimiento de decenas de ríos que
+        surten de agua la region central del pais." />
+
+    <TextView
+        android:id="@+id/sentenceTwo"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/introduction"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text= "Dentro de los planes guiados que puedes realizar alí están las cabalgatas, caminatas interpretativas a través del bosque de niebla, disfrutar de la gastronomía de la zona andina colombiana y Trekking los cuales se dirigen hacia las zonas altas de la montaña, por lo que es recomendable caminar con la compañia de un guía local para no perderse en el bosque de niebla."
+        android:textAlignment="inherit" />
+
+    <TextView
+        android:id="@+id/sentencetrhee"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sentenceTwo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Su temperatura oscila entre los 5ºC y 16ºC.  Durante los meses de entre diciembre a febrero y Julio y Agosto se encuentra en temporada Seca, y durante Abril a Mayo y octubre y noviembre las temporadas de luvia."
+        android:textAlignment="inherit"
+        tools:ignore="UnknownId" />
+
+    <TextView
+        android:id="@+id/sentencefour"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sentencetrhee"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Existen zonas donde es posibe acampar así como tambien algunos hoteles, pero se requiere el equipo necesario y permiso de los habitantes."
+        android:textAlignment="inherit"/>
+
+    <Button
+        android:id="@+id/retornar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="20dp"
+        android:text="Retornar" />
+
+</RelativeLayout>
