@@ -30,16 +30,6 @@ class PoiListActivity : AppCompatActivity() {
     }
 
     private fun createMockSitios(): ArrayList<Sitio> {
-        /*var lista: ArrayList<Sitio> = arrayListOf()
-        var sitio = Sitio(nombre = "Paramo de Santurbán",
-                descripcion = "El Páramo de Santurbán se ubica en los departamentos de Santander y Norte de Santander en una altura desde los 2.800 y hasta los 4.290 metros sobre el nivel del mar." +
-                        "El Páramo de Santurbán es hábitat de 457 especies de plantas, 17 de anfibios, 17 de reptiles, 201 de aves y 58 de mamíferos." +
-                        "Si te gusta la fotografía encontrarás paisajes dignos de postales y si disfrutas el ecoturismo estar rodeado de tanta naturaleza mientras el frío rosa tu piel te dejará fascinado.",
-                caracteristicas = "Temperatura: 0°c hasta 32°c" + "Sitios recomendados: Los mayores atractivos de turismo en el Páramo Santurbán son sus Lagunas.",
-                puntuacion = "8.7/10"
-                )
-        lista.add(sitio)
-        return list*/
 
         return arrayListOf(
                 Sitio(
