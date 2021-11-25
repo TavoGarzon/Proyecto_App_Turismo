@@ -17,8 +17,9 @@ class PoiListActivity : AppCompatActivity() {
 
         poiRecyclerView = findViewById(R.id.poi_recycler_view)
 
-        listSitios = createMockSitios()
+        //listSitios = createMockSitios() "Crear una lista de sitios desde un Array"
 
+        listSitios = loadMockSitiosJson()
         sitiosAdapter = SitiosAdapter(listSitios)
 
         poiRecyclerView.apply {
@@ -28,6 +29,11 @@ class PoiListActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun loadMockSitiosJson(): ArrayList<Sitio> {
+
+    }
+
 
     private fun createMockSitios(): ArrayList<Sitio> {
 
