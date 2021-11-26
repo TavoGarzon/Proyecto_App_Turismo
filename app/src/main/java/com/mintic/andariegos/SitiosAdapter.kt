@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class SitiosAdapter(
     private val poiList: ArrayList<SitioItem>) :
@@ -35,7 +36,7 @@ class SitiosAdapter(
             descripcionTextView.text = sitio.descripcion
             caracteristicasTextView.text = sitio.caracteristicas
             puntuacionTextView.text = sitio.puntuacion
-            //picture
+            Picasso.get().load(sitio.urlfoto).into(fotoImageView);
         }
     }
 }
