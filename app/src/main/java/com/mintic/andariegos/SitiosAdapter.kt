@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class SitiosAdapter(
-    private val poiList: ArrayList<Sitio>) :
+    private val poiList: ArrayList<SitioItem>) :
     RecyclerView.Adapter<SitiosAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,7 +30,7 @@ class SitiosAdapter(
         private var puntuacionTextView: TextView = itemView.findViewById(R.id.puntuacion_text_view)
         private var fotoImageView: ImageView = itemView.findViewById(R.id.foto_image_view)
 
-        fun bind(sitio: Sitio){
+        fun bind(sitio: SitioItem){
             nombreTextView.text = sitio.nombre
             descripcionTextView.text = sitio.descripcion
             caracteristicasTextView.text = sitio.caracteristicas

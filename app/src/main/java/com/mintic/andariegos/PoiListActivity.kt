@@ -4,10 +4,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 
 class PoiListActivity : AppCompatActivity() {
 
-    private lateinit var listSitios: ArrayList<Sitio>
+    private lateinit var listSitios: ArrayList<SitioItem>
     private lateinit var sitiosAdapter: SitiosAdapter
     private lateinit var poiRecyclerView: RecyclerView
 
@@ -30,12 +31,15 @@ class PoiListActivity : AppCompatActivity() {
 
     }
 
-    private fun loadMockSitiosJson(): ArrayList<Sitio> {
-
+    private fun loadMockSitiosJson(): ArrayList<SitioItem> {
+        val sitiosString: String = applicationContext.assets.open("sitios.json").bufferedReader().use { it.readText() }
+        val gson = Gson()
+        val sitioList = gson.fromJson(sitiosString, Sitio::class.java)
+        return sitioList
     }
 
 
-    private fun createMockSitios(): ArrayList<Sitio> {
+    /* private fun createMockSitios(): ArrayList<Sitio> {
 
         return arrayListOf(
                 Sitio(
@@ -58,5 +62,5 @@ class PoiListActivity : AppCompatActivity() {
                         caracteristicas = "Su temperatura oscila entre los 5ºC y 16ºC.",
                         puntuacion = "Puntuación: 8.5/10")
         )
-    }
+    }*/
 }
