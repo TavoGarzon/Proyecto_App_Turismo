@@ -2,22 +2,21 @@ package com.mintic.andariegos.detalle
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.mintic.andariegos.databinding.ActivitySanturbanBinding
+import com.mintic.andariegos.databinding.ActivityDetalleSitioBinding
 import com.mintic.andariegos.model.SitioItem
 import com.squareup.picasso.Picasso
-import java.io.Serializable
 
-class SanturbanActivity : AppCompatActivity() {
+class DetalleSitioActivity : AppCompatActivity() {
 
-    private lateinit var santurbanBinding: ActivitySanturbanBinding
+    private lateinit var detalleSitioBinding: ActivityDetalleSitioBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        santurbanBinding = ActivitySanturbanBinding.inflate(layoutInflater)
-        setContentView(santurbanBinding.root)
+        detalleSitioBinding = ActivityDetalleSitioBinding.inflate(layoutInflater)
+        setContentView(detalleSitioBinding.root)
 
         val sitio: SitioItem = intent.extras?.getSerializable("sitio") as SitioItem
-        with(santurbanBinding) {
+        with(detalleSitioBinding) {
             nombreTextView.text = sitio.nombre
             descripcionTextView.text = sitio.descripcion
             caracteristicasTextView.text = sitio.caracteristicas

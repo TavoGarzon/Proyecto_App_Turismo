@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.mintic.andariegos.R
-import com.mintic.andariegos.detalle.SanturbanActivity
+import com.mintic.andariegos.detalle.DetalleSitioActivity
 import com.mintic.andariegos.model.Sitio
 import com.mintic.andariegos.model.SitioItem
 
@@ -37,7 +37,7 @@ class PoiListActivity : AppCompatActivity() {
     }
 
     private fun onSitioClicked(sitio:SitioItem) {
-    val intent = Intent(this, SanturbanActivity::class.java)
+    val intent = Intent(this, DetalleSitioActivity::class.java)
         intent.putExtra("sitio",sitio)
         startActivity(intent)
     }
