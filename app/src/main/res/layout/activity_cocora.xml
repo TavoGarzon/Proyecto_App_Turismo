@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cocora">
+    tools:context=".detalle.cocora">
 
     <ImageView
-        android:layout_below="@+id/retornar"
-        android:id="@+id/imageView"
+        android:id="@+id/foto_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/retornar"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         app:srcCompat="@drawable/cocora" />
@@ -19,7 +19,7 @@
         android:id="@+id/introduction"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/foto_image_view"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:text="En la reserva natural Valle del Cocora se
@@ -37,7 +37,7 @@
         android:layout_below="@+id/introduction"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:text= "Dentro de los planes guiados que puedes realizar alí están las cabalgatas, caminatas interpretativas a través del bosque de niebla, disfrutar de la gastronomía de la zona andina colombiana y Trekking los cuales se dirigen hacia las zonas altas de la montaña, por lo que es recomendable caminar con la compañia de un guía local para no perderse en el bosque de niebla."
+        android:text="Dentro de los planes guiados que puedes realizar alí están las cabalgatas, caminatas interpretativas a través del bosque de niebla, disfrutar de la gastronomía de la zona andina colombiana y Trekking los cuales se dirigen hacia las zonas altas de la montaña, por lo que es recomendable caminar con la compañia de un guía local para no perderse en el bosque de niebla."
         android:textAlignment="inherit" />
 
     <TextView
@@ -59,7 +59,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:text="Existen zonas donde es posibe acampar así como tambien algunos hoteles, pero se requiere el equipo necesario y permiso de los habitantes."
-        android:textAlignment="inherit"/>
+        android:textAlignment="inherit" />
 
     <Button
         android:id="@+id/retornar"

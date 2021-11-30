@@ -1,4 +1,4 @@
-package com.mintic.andariegos;
+package com.mintic.andariegos.detalle;
 
 import android.app.Activity;
 

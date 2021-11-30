@@ -1,4 +1,4 @@
-package com.mintic.andariegos
+package com.mintic.andariegos.list
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,11 +6,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.mintic.andariegos.R
+import com.mintic.andariegos.model.SitioItem
 import com.squareup.picasso.Picasso
 
 class SitiosAdapter(
-    private val poiList: ArrayList<SitioItem>) :
-    RecyclerView.Adapter<SitiosAdapter.ViewHolder>() {
+    private val poiList: ArrayList<SitioItem>,
+    private val onItemClicked: (SitioItem) -> Unit
+    ) :    RecyclerView.Adapter<SitiosAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_view_poi, parent, false)
@@ -19,6 +22,7 @@ class SitiosAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val sitio = poiList[position]
+        holder.itemView.setOnClickListener{onItemClicked(poiList[position])}
         holder.bind(sitio)
     }
 
@@ -36,7 +40,7 @@ class SitiosAdapter(
             descripcionTextView.text = sitio.descripcion
             caracteristicasTextView.text = sitio.caracteristicas
             puntuacionTextView.text = sitio.puntuacion
-            Picasso.get().load(sitio.urlfoto).into(fotoImageView);
+            Picasso.get().load(sitio.urlfoto).into(fotoImageView)
         }
     }
 }

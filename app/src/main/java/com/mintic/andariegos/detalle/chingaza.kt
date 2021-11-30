@@ -1,12 +1,13 @@
-package com.mintic.andariegos
+package com.mintic.andariegos.detalle
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.mintic.andariegos.R
 
-class cocora : AppCompatActivity() {
+class chingaza : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-      }
+        setContentView(R.layout.activity_chingaza)
+
+    }
 }

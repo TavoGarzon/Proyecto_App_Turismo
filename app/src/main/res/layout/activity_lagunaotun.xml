@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_lagunaotun">
+    tools:context=".detalle.activity_lagunaotun">
 
     <Button
         android:id="@+id/button"
@@ -33,7 +33,7 @@
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/nombre_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/descripcion_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -55,10 +55,10 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre_text_view" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/caracteristicas_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -68,5 +68,5 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>
