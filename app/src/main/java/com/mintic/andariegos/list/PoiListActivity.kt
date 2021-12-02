@@ -1,10 +1,15 @@
-package com.mintic.andariegos
+package com.mintic.andariegos.list
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import com.mintic.andariegos.R
+import com.mintic.andariegos.detalle.DetalleSitioActivity
+import com.mintic.andariegos.model.Sitio
+import com.mintic.andariegos.model.SitioItem
 
 class PoiListActivity : AppCompatActivity() {
 
@@ -21,7 +26,7 @@ class PoiListActivity : AppCompatActivity() {
         //listSitios = createMockSitios() "Crear una lista de sitios desde un Array"
 
         listSitios = loadMockSitiosJson()
-        sitiosAdapter = SitiosAdapter(listSitios)
+        sitiosAdapter = SitiosAdapter(listSitios, onItemClicked = { onSitioClicked(it) } )
 
         poiRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
@@ -29,6 +34,12 @@ class PoiListActivity : AppCompatActivity() {
             setHasFixedSize(false)
         }
 
+    }
+
+    private fun onSitioClicked(sitio:SitioItem) {
+    val intent = Intent(this, DetalleSitioActivity::class.java)
+        intent.putExtra("sitio",sitio)
+        startActivity(intent)
     }
 
     private fun loadMockSitiosJson(): ArrayList<SitioItem> {
