@@ -19,7 +19,6 @@ class DetalleSitioActivity : AppCompatActivity() {
         with(detalleSitioBinding) {
             nombreTextView.text = sitio.nombre
             descripcionTextView.text = sitio.descripcion
-            caracteristicasTextView.text = sitio.caracteristicas
             puntuacionTextView.text = sitio.puntuacion
             Picasso.get().load(sitio.urlfoto).into(fotoImageView)
         }

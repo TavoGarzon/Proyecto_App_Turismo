@@ -5,8 +5,6 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 data class SitioItem(
-    @SerializedName("caracteristicas")
-    val caracteristicas: String,
     @SerializedName("descripcion")
     val descripcion: String,
     @SerializedName("nombre")
