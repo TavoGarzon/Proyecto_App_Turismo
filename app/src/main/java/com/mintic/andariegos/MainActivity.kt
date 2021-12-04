@@ -18,15 +18,10 @@ import com.mintic.andariegos.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.overflow_menu, menu)
-        return true
-    }
 
-
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
@@ -42,19 +37,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-  /*  override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val fm : FragmentManager = supportFragmentManager
-        val ft : FragmentTransaction = fm.beginTransaction()
+/*  override fun onOptionsItemSelected(item: MenuItem): Boolean {
+      val fm : FragmentManager = supportFragmentManager
+      val ft : FragmentTransaction = fm.beginTransaction()
 
-        return when (item.itemId) {
-            R.id.menu_ajustes -> {
-                val settingsFragment = SettingsFragment()
-                ft.replace(R.id.nav_host_fragment_activity_main, settingsFragment).commit()
-                ft.addToBackStack(null)
-                true
-            }
-            else -> {
-                return true
-            }
-        }
-    }*/
+      return when (item.itemId) {
+          R.id.menu_ajustes -> {
+              val settingsFragment = SettingsFragment()
+              ft.replace(R.id.nav_host_fragment_activity_main, settingsFragment).commit()
+              ft.addToBackStack(null)
+              true
+          }
+          else -> {
+              return true
+          }
+      }
+  }*/
