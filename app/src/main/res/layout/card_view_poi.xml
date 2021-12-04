@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="404dp"
-        android:layout_height="wrap_content"
+        android:layout_height="240dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -21,7 +21,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/foto_image_view"
@@ -61,17 +61,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/nombre_text_view" />
 
             <TextView
-                android:id="@+id/caracteristicas_text_view"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="@string/caracteristicas"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/foto_image_view"
-                app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view" />
-
-            <TextView
                 android:id="@+id/puntuacion_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,9 +70,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.518"
-                app:layout_constraintStart_toEndOf="@+id/foto_image_view"
-                app:layout_constraintTop_toBottomOf="@+id/caracteristicas_text_view"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toEndOf="@+id/foto_image_view" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

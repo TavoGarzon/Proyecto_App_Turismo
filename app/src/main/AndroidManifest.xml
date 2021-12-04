@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.mintic.andariegos">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,11 @@
         android:theme="@style/Theme.Andariegos"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".PoiListActivity"
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".list.PoiListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".MainActivity"
+            android:name=".detalle.DetalleSitioActivity"
             android:exported="true" />
-
     </application>
 
 </manifest>

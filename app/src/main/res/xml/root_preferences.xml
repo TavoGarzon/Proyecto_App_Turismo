@@ -1,0 +1,16 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/title_notifications">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/check_box_notifications"
+            android:title="@string/check_box_notifications" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/check_box_sound_notifications"
+            android:title="@string/check_box_sound_notifications"
+            app:dependency="@string/check_box_notifications" />
+    </PreferenceCategory>
+</PreferenceScreen>
