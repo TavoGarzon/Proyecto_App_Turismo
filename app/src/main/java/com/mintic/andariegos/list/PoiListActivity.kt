@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import com.mintic.andariegos.MainActivity
 import com.mintic.andariegos.R
 import com.mintic.andariegos.SettingsFragment
 import com.mintic.andariegos.detalle.DetalleSitioActivity
@@ -18,30 +19,6 @@ import com.mintic.andariegos.model.Sitio
 import com.mintic.andariegos.model.SitioItem
 
 class PoiListActivity : AppCompatActivity() {
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.overflow_menu, menu)
-        return true
-    }
-
-    /*TODO() ARREGLAR ESTA FUNCION
-       override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val fm : FragmentManager = supportFragmentManager
-        val ft : FragmentTransaction = fm.beginTransaction()
-
-          return when (item.itemId) {
-             R.id.menu_ajustes -> {
-                 val settingsFragment = SettingsFragment()
-                 ft.replace(R.id.fragment_container_view_tag, settingsFragment).commit()
-                 ft.addToBackStack(null)
-                 true
-             }
-             else -> {
-                 return true
-             }
-         }
-    }*/
 
     private lateinit var listSitios: ArrayList<SitioItem>
     private lateinit var sitiosAdapter: SitiosAdapter
@@ -80,6 +57,24 @@ class PoiListActivity : AppCompatActivity() {
         return sitioList
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.overflow_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.menu_ajustes  -> {
+                val intent = Intent(this,
+                    MainActivity::class.java)
+
+                startActivity(intent)
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
 
     /* private fun createMockSitios(): ArrayList<Sitio> {
 
