@@ -7,7 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
         tools:context=".santurban">
 
@@ -48,7 +48,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="@string/descripcion"
+            android:text="descripcion del sitio"
             android:textAlignment="textStart"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,30 +56,43 @@
             app:layout_constraintTop_toBottomOf="@+id/foto_image_view" />
 
         <TextView
-            android:id="@+id/caracteristicas_text_view"
+            android:id="@+id/ubicacion_text_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="@string/caracteristicas"
+            android:text="Ubicacion del sitio"
+            android:textAlignment="textStart"
+            android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/descripcion_text_view" />
+
 
         <TextView
             android:id="@+id/puntuacion_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/puntuacion"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/ic_menu_myplaces"
+            app:layout_constraintBottom_toTopOf="@+id/puntuacion_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/caracteristicas_text_view" />
+            app:layout_constraintTop_toBottomOf="@+id/ubicacion_text_view"
+            app:layout_constraintVertical_bias="1.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

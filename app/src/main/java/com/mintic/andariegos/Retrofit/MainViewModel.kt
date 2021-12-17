@@ -22,10 +22,10 @@ class MainViewModel : ViewModel() {
 
     private fun requestUsers(){
         var list = listOf<SitioItem>(
-            SitioItem("parque","chingaza","malo",""),
-            SitioItem("parque","cocora","bueno",""),
-            SitioItem("parque","santurban","regular",""),
-            SitioItem("parque","cocora","excelente","")
+            SitioItem("parque","chingaza","malo","","",""),
+            SitioItem("parque","cocora","bueno","","",""),
+            SitioItem("parque","santurban","regular","","",""),
+            SitioItem("parque","cocora","excelente","","","")
         )
         sitesList.value = list
     }
