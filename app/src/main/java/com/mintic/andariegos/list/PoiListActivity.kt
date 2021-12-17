@@ -8,11 +8,13 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.mintic.andariegos.MainActivity
 import com.mintic.andariegos.R
+import com.mintic.andariegos.Retrofit.MainViewModel
 import com.mintic.andariegos.SettingsFragment
 import com.mintic.andariegos.detalle.DetalleSitioActivity
 import com.mintic.andariegos.model.Sitio
@@ -20,26 +22,37 @@ import com.mintic.andariegos.model.SitioItem
 
 class PoiListActivity : AppCompatActivity() {
 
-    private lateinit var listSitios: ArrayList<SitioItem>
+    private lateinit var listSitios: List<SitioItem>
     private lateinit var sitiosAdapter: SitiosAdapter
     private lateinit var poiRecyclerView: RecyclerView
+    private  lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_poi_list)
 
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+
         poiRecyclerView = findViewById(R.id.poi_recycler_view)
 
         //listSitios = createMockSitios() "Crear una lista de sitios desde un Array"
 
-        listSitios = loadMockSitiosJson()
-        sitiosAdapter = SitiosAdapter(listSitios, onItemClicked = { onSitioClicked(it) })
+        viewModel.getSites().observe(this, {
+            listSitios = it
+            sitiosAdapter = SitiosAdapter(listSitios, onItemClicked = { onSitioClicked(it) })
+            poiRecyclerView.apply {
+                layoutManager = LinearLayoutManager(context)
+                adapter = sitiosAdapter
+                setHasFixedSize(false)
+            }
+        })
 
-        poiRecyclerView.apply {
+
+       /* poiRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = sitiosAdapter
             setHasFixedSize(false)
-        }
+        }*/
 
     }
 

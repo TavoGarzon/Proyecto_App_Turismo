@@ -11,7 +11,7 @@ import com.mintic.andariegos.model.SitioItem
 import com.squareup.picasso.Picasso
 
 class SitiosAdapter(
-    private val poiList: ArrayList<SitioItem>,
+    private val poiList: List<SitioItem>,
     private val onItemClicked: (SitioItem) -> Unit
     ) :    RecyclerView.Adapter<SitiosAdapter.ViewHolder>() {
 

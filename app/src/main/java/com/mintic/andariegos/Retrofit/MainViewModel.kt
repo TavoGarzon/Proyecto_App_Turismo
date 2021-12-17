@@ -11,26 +11,32 @@ class MainViewModel : ViewModel() {
 
     private var sitesList = MutableLiveData<List<SitioItem>>()
 
+    private var factory = RetrofitFactory.apiService()
+
     init {
        // requestUsers()
-       //requestUsersFromService()
+       requestUsersFromService()
     }
 
-   /* fun getSites() :LiveData<List<SitioItem>> = sitesList
+   fun getSites() :LiveData<List<SitioItem>> = sitesList
+
     private fun requestUsers(){
         var list = listOf<SitioItem>(
-            SitioItem("parque","chingaza","PG",""),
-            SitioItem("parque","cocora","PM",""),
-            SitioItem("parque","santurban","JA",""),
-            SitioItem("parque","cocora","CR","")
+            SitioItem("parque","chingaza","malo",""),
+            SitioItem("parque","cocora","bueno",""),
+            SitioItem("parque","santurban","regular",""),
+            SitioItem("parque","cocora","excelente","")
         )
         sitesList.value = list
-    }*/
+    }
 
-   /* private fun requestUsersFromService() {
-        viewModelScope.launch {
-            sitesList.value = ApiService.requestSites()
+
+    fun requestUsersFromService() {
+
+            viewModelScope.launch {
+            sitesList.postValue(factory.reqSites())
 
         }
-    }*/
+
+   }
 }
