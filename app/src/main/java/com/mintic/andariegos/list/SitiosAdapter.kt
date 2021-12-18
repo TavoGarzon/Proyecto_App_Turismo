@@ -31,14 +31,12 @@ class SitiosAdapter(
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         private var nombreTextView: TextView = itemView.findViewById(R.id.nombre_text_view)
         private var descripcionTextView: TextView = itemView.findViewById(R.id.descripcion_text_view)
-        private var caracteristicasTextView: TextView = itemView.findViewById(R.id.caracteristicas_text_view)
         private var puntuacionTextView: TextView = itemView.findViewById(R.id.puntuacion_text_view)
         private var fotoImageView: ImageView = itemView.findViewById(R.id.foto_image_view)
 
         fun bind(sitio: SitioItem){
             nombreTextView.text = sitio.nombre
             descripcionTextView.text = sitio.descripcion
-            caracteristicasTextView.text = sitio.caracteristicas
             puntuacionTextView.text = sitio.puntuacion
             Picasso.get().load(sitio.urlfoto).into(fotoImageView)
         }

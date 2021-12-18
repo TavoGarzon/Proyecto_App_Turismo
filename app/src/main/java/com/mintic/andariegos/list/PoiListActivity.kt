@@ -2,11 +2,18 @@ package com.mintic.andariegos.list
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import com.mintic.andariegos.MainActivity
 import com.mintic.andariegos.R
+import com.mintic.andariegos.SettingsFragment
 import com.mintic.andariegos.detalle.DetalleSitioActivity
 import com.mintic.andariegos.model.Sitio
 import com.mintic.andariegos.model.SitioItem
@@ -26,7 +33,7 @@ class PoiListActivity : AppCompatActivity() {
         //listSitios = createMockSitios() "Crear una lista de sitios desde un Array"
 
         listSitios = loadMockSitiosJson()
-        sitiosAdapter = SitiosAdapter(listSitios, onItemClicked = { onSitioClicked(it) } )
+        sitiosAdapter = SitiosAdapter(listSitios, onItemClicked = { onSitioClicked(it) })
 
         poiRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
@@ -36,19 +43,38 @@ class PoiListActivity : AppCompatActivity() {
 
     }
 
-    private fun onSitioClicked(sitio:SitioItem) {
-    val intent = Intent(this, DetalleSitioActivity::class.java)
-        intent.putExtra("sitio",sitio)
+    private fun onSitioClicked(sitio: SitioItem) {
+        val intent = Intent(this, DetalleSitioActivity::class.java)
+        intent.putExtra("sitio", sitio)
         startActivity(intent)
     }
 
     private fun loadMockSitiosJson(): ArrayList<SitioItem> {
-        val sitiosString: String = applicationContext.assets.open("sitios.json").bufferedReader().use { it.readText() }
+        val sitiosString: String =
+            applicationContext.assets.open("sitios.json").bufferedReader().use { it.readText() }
         val gson = Gson()
         val sitioList = gson.fromJson(sitiosString, Sitio::class.java)
         return sitioList
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.overflow_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId){
+            R.id.menu_ajustes  -> {
+                val intent = Intent(this,
+                    MainActivity::class.java)
+
+                startActivity(intent)
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
 
     /* private fun createMockSitios(): ArrayList<Sitio> {
 
