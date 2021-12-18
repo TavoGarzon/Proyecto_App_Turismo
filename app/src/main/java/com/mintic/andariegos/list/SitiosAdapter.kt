@@ -11,7 +11,7 @@ import com.mintic.andariegos.model.SitioItem
 import com.squareup.picasso.Picasso
 
 class SitiosAdapter(
-    private val poiList: ArrayList<SitioItem>,
+    private val poiList: List<SitioItem>,
     private val onItemClicked: (SitioItem) -> Unit
     ) :    RecyclerView.Adapter<SitiosAdapter.ViewHolder>() {
 
@@ -33,11 +33,13 @@ class SitiosAdapter(
         private var descripcionTextView: TextView = itemView.findViewById(R.id.descripcion_text_view)
         private var puntuacionTextView: TextView = itemView.findViewById(R.id.puntuacion_text_view)
         private var fotoImageView: ImageView = itemView.findViewById(R.id.foto_image_view)
+//        private var ubicacionTextView: TextView = itemView.findViewById(R.id.ubicacion_text_view)
 
         fun bind(sitio: SitioItem){
             nombreTextView.text = sitio.nombre
             descripcionTextView.text = sitio.descripcion
             puntuacionTextView.text = sitio.puntuacion
+//            ubicacionTextView.text = "${sitio.lat} ${sitio.long}"
             Picasso.get().load(sitio.urlfoto).into(fotoImageView)
         }
     }

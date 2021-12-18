@@ -12,5 +12,9 @@ data class SitioItem(
     @SerializedName("puntuacion")
     val puntuacion: String,
     @SerializedName("urlfoto")
-    val urlfoto: String
+    val urlfoto: String,
+    @SerializedName("lat")
+    val lat: String,
+    @SerializedName("long")
+    val long: String
 ):Serializable
