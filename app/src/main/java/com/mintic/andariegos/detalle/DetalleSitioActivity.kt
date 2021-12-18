@@ -13,18 +13,24 @@ import com.squareup.picasso.Picasso
 class DetalleSitioActivity : AppCompatActivity() {
 
     private lateinit var detalleSitioBinding: ActivityDetalleSitioBinding
+    /*var sitio: SitioItem = TODO()*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         detalleSitioBinding = ActivityDetalleSitioBinding.inflate(layoutInflater)
         setContentView(detalleSitioBinding.root)
 
-        val button = findViewById<Button>(R.id.button)
+       /* val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
             launchMap("","")
-        }
+        }*/
 
         val sitio: SitioItem = intent.extras?.getSerializable("sitio") as SitioItem
+        val button = findViewById<Button>(R.id.button)
+        button.setOnClickListener {
+            launchMap(sitio.lat,sitio.long)
+        }
+
         with(detalleSitioBinding) {
             nombreTextView.text = sitio.nombre
             descripcionTextView.text = sitio.descripcion
